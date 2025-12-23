@@ -1,0 +1,31 @@
+services:
+  backend:
+    image: img_backend_local
+    build:
+      context: ./img_backend
+    container_name: img_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
+      - ALLOWED_HOSTS=backend,localhost,127.0.0.1
+      - CORS_ALLOWED_ORIGINS=http://localhost
+      - SECRET_KEY=django-insecure-prod-key-change-me
+    volumes:
+      - ./img_backend/media:/app/media
+      - ./img_backend/db.sqlite3:/app/db.sqlite3
+      - ./img_backend/models:/app/models
+
+  frontend:
+    image: img_frontend_local
+    build:
+      context: ./img_frontend
+    container_name: img_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./img_backend/media:/usr/share/nginx/html/media
+    depends_on:
+      - backend

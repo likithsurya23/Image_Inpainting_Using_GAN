@@ -1,0 +1,17 @@
+Django
+djangorestframework
+Pillow
+torch
+torchvision
+django-cors-headers
+numpy
+opencv-python
+matplotlib
+tqdm
+scikit-image
+scikit-learn
+pandas
+seaborn
+imageio
+jupyter
+notebook
