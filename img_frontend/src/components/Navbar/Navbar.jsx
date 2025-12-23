@@ -34,13 +34,13 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-6">
                     <button
                         onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                        className={`text-sm ${theme.text.secondary} hover:${theme.text.accent} font-medium transition-colors`}
+                        className={`text-sm ${theme.button.secondary} hover:${theme.text.accent} font-medium transition-colors`}
                     >
                         Features
                     </button>
                     <button
                         onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                        className={`text-sm ${theme.text.secondary} hover:${theme.text.accent} font-medium transition-colors`}
+                        className={`text-sm ${theme.button.secondary} hover:${theme.text.accent} font-medium transition-colors`}
                     >
                         How It Works
                     </button>
