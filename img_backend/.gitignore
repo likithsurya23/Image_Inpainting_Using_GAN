@@ -116,7 +116,6 @@ venv.bak/
 Thumbs.db
 
 # Machine learning model files
-*.pth
 *.pt
 *.h5
 *.onnx
