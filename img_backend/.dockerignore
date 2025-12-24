@@ -1,52 +1,45 @@
-
 # Git
 .git
 .gitignore
+.gitattributes
 
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
-# Virtual Environment
+# Virtual environments
 .venv
 venv/
 env/
 ENV/
 
-# Application Data
+# ML models (CRITICAL)
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.onnx
+
+# Data & training
+Train/
+data/
+datasets/
+outputs/
+
+# App data
 db.sqlite3
 media/
-Train/
 *.sqlite3
 
-# Environment Variables
+# Env files
 .env
 .env.*
 
 # IDE
 .idea/
 .vscode/
-*.swp
-*.swo
 
 # Logs
 *.log
